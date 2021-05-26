@@ -347,40 +347,4 @@ template {
 [hidden] {
   display: none;
 }
-
-:root {
-  --base: #ffc600;
-  --spacing: 10px;
-  --blur: 10px;
-  --sepia: 0%;
-  --saturate: 100%;
-}
-
-body {
-  text-align: center;
-  background: #193549;
-  color: white;
-  font-family: 'helvetica neue', sans-serif;
-  font-weight: 100;
-  font-size: 3rem;
-}
-
-body .h2 {
-  color: var(--base);
-}
-
-body .controls {
-  margin-bottom: 50px;
-}
-
-body .controls input {
-  width: 100px;
-}
-
-body .img {
-  padding: var(--spacing);
-  background: var(--base);
-  -webkit-filter: sepia(var(--sepia)) blur(var(--blur)) saturate(var(--saturate));
-          filter: sepia(var(--sepia)) blur(var(--blur)) saturate(var(--saturate));
-}
 /*# sourceMappingURL=style.css.map */
