@@ -10,9 +10,12 @@ CTX.lineCap = 'round';
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
-
+let color = 0;
+let direction = true;
+ 
 let draw = (e) => {
     if (!isDrawing) return;
+    CTX.strokeStyle = `hsl(${color}, 100%, 50%)`;
     console.log(e);
     CTX.beginPath();
     CTX.moveTo(lastX, lastY);
@@ -21,7 +24,18 @@ let draw = (e) => {
 
     lastX = e.offsetX;
     lastY = e.offsetY;
-
+    color++;
+    if (color > 360) {
+        color = 0;
+    }
+    if (CTX.lineWidth >= 100 || CTX.lineWidth <= 1){
+        direction = !direction;
+    }
+    if (direction) {
+        CTX.lineWidth++;
+    } else {
+        CTX.lineWidth--;
+    }
 }
 
 
