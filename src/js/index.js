@@ -1,8 +1,10 @@
 const CANVAS = document.querySelector('#draw');
 const CTX = CANVAS.getContext('2d');
+const PALETTE = document.querySelectorAll('palette');
 
 CANVAS.width = window.innerWidth;
-CANVAS.height = window.innerHeight;
+// Я не придумал как убрать прокрутку, по этому отключил
+// CANVAS.height = window.innerHeight;
 CTX.strokeStyle = '#BADASS';
 CTX.lineJoin = 'round';
 CTX.lineCap = 'round';
@@ -16,7 +18,6 @@ let direction = true;
 let draw = (e) => {
     if (!isDrawing) return;
     CTX.strokeStyle = `hsl(${color}, 100%, 50%)`;
-    console.log(e);
     CTX.beginPath();
     CTX.moveTo(lastX, lastY);
     CTX.lineTo(e.offsetX, e.offsetY);
@@ -27,7 +28,7 @@ let draw = (e) => {
     color++;
     if (color > 360) {
         color = 0;
-    }
+    }  
     if (CTX.lineWidth >= 100 || CTX.lineWidth <= 1){
         direction = !direction;
     }
@@ -46,3 +47,4 @@ CANVAS.addEventListener('mousedown', (e) => {
 });
     CANVAS.addEventListener('mouseup', () => isDrawing = false);
 CANVAS.addEventListener('mouseout', () => isDrawing = false);
+

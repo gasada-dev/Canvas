@@ -347,4 +347,66 @@ template {
 [hidden] {
   display: none;
 }
+
+.main {
+  overflow: hidden;
+}
+
+.palette {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.palette .color {
+  padding: 5%;
+  border-bottom: 1px solid #000;
+}
+
+.palette .red {
+  background-color: #FF0000;
+}
+
+.palette .orange {
+  background-color: #FFA500;
+}
+
+.palette .green {
+  background-color: #008000;
+}
+
+.palette .yellow {
+  background-color: #FFFF00;
+}
+
+.palette .purple {
+  background-color: #800080;
+}
+
+.palette .coral {
+  background-color: #FF7F50;
+}
+
+.palette .white {
+  background-color: #ffffff;
+}
+
+.palette .black {
+  background-color: #000000;
+}
+
+.palette .blue {
+  background-color: #0000FF;
+}
+
+.palette .pink {
+  background-color: #FFC0CB;
+}
+
+.canvas {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
 /*# sourceMappingURL=style.css.map */
