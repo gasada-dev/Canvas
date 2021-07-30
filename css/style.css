@@ -347,4 +347,19 @@ template {
 [hidden] {
   display: none;
 }
+
+body {
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  left: 35%;
+  top: 40%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  pointer-events: none;
+  color: #2a636d;
+}
 /*# sourceMappingURL=style.css.map */
